@@ -10,7 +10,7 @@ Feature: List articles on landing page
             | Learn Rails 5        | Build awesome rails applications |
 
     Scenario: Viewing list of articles on the applications landing page
-        When I am on the landing page
+        Given I am on the index page
         Then I should see "A breaking news item"
         And I should see "Some breaking action"
         And I should see "Learn Rails 5"
