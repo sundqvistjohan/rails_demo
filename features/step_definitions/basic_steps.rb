@@ -8,6 +8,13 @@ Given("the following articles exist") do |table|
     end
 end
 
-When("I click on {string}") do |element|
+When("I click {string}") do |element|
     click_on element
 end
+
+When("I fill in {string} with {string}") do |input, content|
+    fill_in input, with: content
+end
+
+
+  

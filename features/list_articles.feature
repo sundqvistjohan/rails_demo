@@ -15,6 +15,3 @@ Feature: List articles on landing page
         And I should see "Some breaking action"
         And I should see "Learn Rails 5"
         And I should see "Build awesome rails applications"
-
-
-
