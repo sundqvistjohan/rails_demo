@@ -1,4 +1,5 @@
 When("I click {string}") do |element|
+    binding.pry
     click_on element
 end
 
