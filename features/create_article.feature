@@ -11,6 +11,7 @@ Feature: User can create articles
 
     Scenario: User can successfully create and article [Happy Path]
         Given I am logged in as "user@mail.com"
+        And I am on the index page
         When I click "New Article"
         And I fill in "Title" with "Learning Rails 6"
         And I fill in "Content" with "Excited about learning a new framework"
