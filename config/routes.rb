@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'landing#index'
-  resources :articles, only: [:new, :create, :show]
-
+  root controller: :landing, action: :index
+  resources :articles, only: [:new, :create, :show] do
+    resources :comments, only: [:create]
+  end
 end
