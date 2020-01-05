@@ -20,6 +20,11 @@ class ArticlesController < ApplicationController
     @comment = Comment.new
   end
   
+  def edit
+  end
+
+  private
+
   def article_params
     params.require(:article).permit(:title, :content)
   end
