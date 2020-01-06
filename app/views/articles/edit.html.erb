@@ -1,0 +1,8 @@
+<h1>Edit article</h1>
+<%= form_with model: @article do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title, placeholder: @article.title %>
+    <%= form.label :content %>
+    <%= form.text_area :content, placeholder: @article.content %>
+    <%= form.submit "Save article" %>
+<% end %>

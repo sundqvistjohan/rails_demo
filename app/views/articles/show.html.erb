@@ -5,6 +5,7 @@
 <p>
   <%= @article.content%>
 </p>
+<%= link_to "Edit article", edit_article_path %>
 
 <% @article.comments.each do |comment| %>
   <p> <%= comment.body %> </p>

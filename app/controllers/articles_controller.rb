@@ -20,6 +20,23 @@ class ArticlesController < ApplicationController
     @comment = Comment.new
   end
   
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    article = Article.find(params[:id])
+    article.update(article_params)
+
+    if article.errors.empty?
+      redirect_to article, notice: "Article successfully updated"
+    else
+      render 'edit'
+    end
+  end
+
+  private
+
   def article_params
     params.require(:article).permit(:title, :content)
   end
